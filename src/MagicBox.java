@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class MagicBox<T> {
+    private Integer count;
 
     private int value;
 
@@ -11,14 +12,10 @@ public class MagicBox<T> {
     }
 
     public boolean add(T item) {
-        for (T i : items) {
-            if (i == null) {
-                i = item;
-            }
-        }
-        for (int j = 0; j < items.length; j++) {
-            if (items[j] == null) {
-                items[j] = item;
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == null) {
+                items[i] = item;
+                count = i + 1;
                 return true;
             }
         }
