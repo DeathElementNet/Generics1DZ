@@ -3,11 +3,11 @@ import java.util.Random;
 public class MagicBox<T> {
     private Integer count;
 
-    private int value;
+    private int size;
 
     private T[] items;
     public MagicBox(int value) {
-        this.value = value;
+        this.size = value;
         this.items = (T[]) new Object[value];
     }
 
@@ -37,7 +37,7 @@ public class MagicBox<T> {
 
     private int random() {
         Random random = new Random();
-        int randomInt = random.nextInt(value - 1); // джава подберёт случайное число от 0 до ЧИСЛО невключительно
+        int randomInt = random.nextInt(size - 1); // джава подберёт случайное число от 0 до ЧИСЛО невключительно
         return randomInt;
     }
 }
