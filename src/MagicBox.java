@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class MagicBox<T> {
-    private Integer count;
+
 
     private int size;
 
@@ -15,14 +15,15 @@ public class MagicBox<T> {
         for (int i = 0; i < items.length; i++) {
             if (items[i] == null) {
                 items[i] = item;
-                count = i + 1;
+
                 return true;
             }
         }
+        System.out.println("В коробке больше нет места!");
         return false;
     }
 
-    public T pick() throws RuntimeException {
+    public T pick() throws RuntimeException { //метод для проверки заполнености коробки.
         int elements = 0;
         for (T e : items) {
             if (e == null) {
