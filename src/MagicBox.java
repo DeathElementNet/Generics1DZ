@@ -6,9 +6,9 @@ public class MagicBox<T> {
     private int size;
 
     private T[] items;
-    public MagicBox(int value) {
-        this.size = value;
-        this.items = (T[]) new Object[value];
+    public MagicBox(int size) {
+        this.size = size;
+        this.items = (T[]) new Object[size];
     }
 
     public boolean add(T item) {
